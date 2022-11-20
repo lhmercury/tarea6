@@ -5,61 +5,139 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{GP} Contacto </title>
+    <title> {GP} Contacto </title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    </head>
+</head>
 
 <body class="bg-info">
     <img src="images\unetilogo.png" width="100" height="50">
     <section class="bg-image d-flex justify-content-center align-items-center" style="
      background-image: url('https://mdbcdn.b-cdn.net/img/new/fluid/nature/015.webp');
      height: 100vh;  ">
-        <div class="card col-sm-6 p-3">
+        <div class="card col-sm-6 p-1">
             <div class="mb-3">
                 <h4>Contacto</h4>
             </div>
             <div class="mb-2">
                 <form action="">
 
-                   <div class="shadow-lg p-3 mb-5 bg-body rounded">
+                    <div class="shadow-lg p-3 mb-5 bg-body rounded">
 
-                     <div class="mb-2">
-                        <label for="nombre">Nombre</label>
-                        <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Ej: Gabriel">
-                     </div>
-                     <div class="mb-2">
-                        <label for="apellido">Apellido</label>
-                        <input type="text" class="form-control" name="apellido" id="apellido"
-                            placeholder="Ej: Apellido">
-                     </div>
-                     <div class="mb-2">
-                        <label for="correo">Correo</label>
-                        <input type="text" class="form-control" name="correo" id="correo"
-                            placeholder="name@dominio.com">
-                     </div>
-                     <div class="mb-2">
-                        <label for="sexo">Sexo</label>
-                        <input type="radio" name="sexo" id="masculino" value="masculino"> Masculino
-                        <input type="radio" name="sexo" id="femenino" value="femenino"> Femenino
-                     </div>
-                     <div class="mb-2">
-                        <label for="mensaje">Mensaje</label>
-                        <textarea name="mensaje" id="mensaje" class="form-control"
-                            placeholder="ej. Comentario "></textarea>
-                     </div>
-                    </div>
-                    <div class="mb-2">
-                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                            <button class="btn btn-primary" type="button">Enviar</button>
+                        <div class="form-row">
+                            <div class="form-group col-md-8">
+                                <div class="mb-2">
+                                    <label for="nombre">Nombre</label>
+                                    <input type="text" class="form-control" name="nombre" id="nombre" maxlength="20"
+                                        placeholder="Ej: Gabriel">
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-4">
+                                <div class="mb-2">
+                                    <label for="telefono">Telefono</label>
+                                    <input type="text" class="form-control" name="telefono" id="telefono" maxlength="20"
+                                        placeholder="Ej: 04**-1234567">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-2">
+                            <label for="direccion">Direccion</label>
+                            <input type="text" class="form-control" name="direccion" id="direccion" maxlength="50"
+                                placeholder="Ej: Direccion">
+                        </div>
+
+
+                        <div class="form-row">
+                            <div class="form-group col-md-8">
+                                <div class="mb-2">
+                                    <label for="date">Fecha</label>
+                                    <div class="col-sm-6">
+                                        <div class="input-group date" id="datepicker">
+                                            <input type="text" class="form-control">
+                                            <span class="input-group-append">
+                                                <span class="input-group-text bg-white">
+                                                    <i class="fa fa-calendar"></i>
+                                                </span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <div class="mb-2">
+                                    <label for="direccion">Estatura</label>
+                                    <select class="form-select form-select-sm" aria-label="Ejemplo de .form-select-sm">
+                                        <option selected>Seleccione su Estatura</option>
+                                        <option value="1">1,65 mt</option>
+                                        <option value="2">1,67 mt</option>
+                                        <option value="3">1,69 mt</option>
+                                        <option value="3">1,70 mt</option>
+                                        <option value="3">1,71 mt</option>
+                                        <option value="3">1,72 mt</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-md-8">
+                                <div class="mb-2">
+                                    <label for="sexo">Sexo</label>
+                                    <div class="btn-group" role="group" aria-label="Basic outlined example">
+                                        <input type="checkbox" class="btn-check" name="sexo" id="masculino"
+                                            autocomplete="off" required>
+                                        <label class="btn btn-outline-primary" for="masculino">Masculino</label>
+
+                                        <input type="checkbox" class="btn-check" name="sexo" id="femenino"
+                                            autocomplete="off" required>
+                                        <label class="btn btn-outline-primary" for="femenino">Femenino</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md">
+                                <div class="mb-2">
+                                    <input type="radio" name="brazo" id="zurdo" value="zurdo" required> Zurdo
+                                    <input type="radio" name="brazo" id="derecho" value="derecho" required> Diestro
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="mb-2">
+                            <label for="correo">Correo</label>
+                            <input type="email" class="form-control" name="correo" id="correo"
+                                placeholder="name@dominio.com" aria-describedby="emailHelp" required>
                         </div>
                     </div>
-                </form>>
+
+                    <div class="mb-2">
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            <button class="btn btn-danger" type="submit" value="Submit">Enviar</button>
+                            <button class="btn btn-primary" type="reset" value="Reset">Cancelar</button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
 
     </section>
+
+    <script type="text/javascript">
+        $(function () {
+            $('#datepicker').datepicker();
+        });
+    </script>
 
 </body>
 <footer class="bg-primary text-white text-center text-lg-start">
